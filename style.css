@@ -1,0 +1,54 @@
+@import "css_modules/reset.css";
+@import "css_modules/theming.css";
+
+body {
+    padding: 0.5rem;
+}
+
+.header__box {
+    margin: 1.5rem 0;
+}
+
+.header__title {
+    text-align: center;
+}
+
+.the-day {
+    text-align: center;
+    border: 3px dashed var(--txt-color);
+    padding: 1rem 0.5rem;
+}
+
+.the-day + .the-day {
+    margin-top: 1.0rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.an-entry {
+    border: 1px solid var(--txt-color);
+    margin: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    min-width: 200px;
+    max-width: 340px; 
+}
+
+.an-entry__title {
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.an-entry__copy {
+    margin-top: 0.7rem;
+}
+
+.copy__li {
+    text-align: center;
+}
+

@@ -1,0 +1,10 @@
+:root {
+    --txt-color: #41FF00;
+    --bg-color: #282828;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--txt-color);
+    font-family: Consolas;
+}
