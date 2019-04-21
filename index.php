@@ -50,6 +50,22 @@
                 </ul>
             </div>
         </div>
+        <div class="an-entry">
+            <div class="an-entry__title">
+                Day 3
+            </div>
+            <div class="an-entry__copy">
+                <ul class="copy__list">
+                    <li class="copy__li">This thing</li>
+                    <li class="copy__li">That thing</li>
+                </ul>
+            </div>
+        </div>
     </main>
+    <footer>
+        <div class="link">
+            <a href="dashboard.php" class="dash">DASHBOARD</a>
+        </div>
+    </footer>
 </body>
 </html>

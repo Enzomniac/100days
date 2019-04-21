@@ -52,3 +52,16 @@ main {
     text-align: center;
 }
 
+.dash-main {
+    height: 100vh;
+}
+
+.entry-form {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+}
+
+.entry-form * {
+    margin: 0.5rem;
+}
