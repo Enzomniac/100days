@@ -1,3 +1,8 @@
+<?php 
+include('php_modules/connect_db.php');
+$queryString = "SELECT day, date, entry_list FROM days_entry";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,44 +32,32 @@
         </div>        
     </aside>
     <main>
-        <div class="an-entry">
-            <div class="an-entry__title">
-                Day 1
-            </div>
-            <div class="an-entry__copy">
-                <ul class="copy__list">
-                    <li class="copy__li">This Webpage</li>
-                    <li class="copy__li">Basic mobile layout</li>
-                    <li class="copy__li">Theming variables for retro design</li>
-                    <li class="copy__li">Setup git repo</li>
-                </ul>
-            </div>
-        </div>
-        <div class="an-entry">
-            <div class="an-entry__title">
-                Day 2
-            </div>
-            <div class="an-entry__copy">
-                <ul class="copy__list">
-                    <li class="copy__li">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa fugit illo enim? Unde sed, reprehenderit voluptatem sint placeat facere non harum, officia blanditiis corporis beatae sequi quam! Quos repellat necessitatibus consequatur nostrum at, aliquam esse ad, nam maiores nobis ea. Officiis enim sed aspernatur dolor corporis at explicabo beatae facilis.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="an-entry">
-            <div class="an-entry__title">
-                Day 3
-            </div>
-            <div class="an-entry__copy">
-                <ul class="copy__list">
-                    <li class="copy__li">This thing</li>
-                    <li class="copy__li">That thing</li>
-                </ul>
-            </div>
-        </div>
+<?php
+
+$result = $dbConnection->query($queryString);
+
+if ($result -> num_rows > 0) {
+    $anEntryString = "";
+    while ($row = $result->fetch_assoc()) {
+        $anEntryString =    '<div class="an-entry">';
+        $anEntryString .=        '<div class="an-entry__title">';
+        $anEntryString .=           'Day: ' . $row['day'];
+        $anEntryString .=       '</div>';
+        $anEntryString .=       '<div class="an-entry__copy">';
+        $anEntryString .=           $row['entry_list'];
+        $anEntryString .=       '</div>';
+        $anEntryString .=   '</div>';
+        echo($anEntryString);        
+    }
+} else {
+    echo("No results!<br>");
+}
+$dbConnection->close();
+?>        
     </main>
     <footer>
         <div class="link">
-            <a href="dashboard.php" class="dash">DASHBOARD</a>
+            <a href="dashboard.php" class="link">DASHBOARD</a>
         </div>
     </footer>
 </body>

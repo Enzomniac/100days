@@ -1,13 +1,5 @@
 <?php
-$dbConnection = mysqli_connect("localhost", "root", "", "rupton_db");
-
-//check connection
-if (mysqli_connect_errno()) {
-    echo("Failed to connect to MySQLi: " .mysqli_connect_error());
-} else {
-    echo("Succesfull connection to database<br>");
-}
-
+include('php_modules/config.php');
 $queryString = "INSERT INTO days_entry (day, date, entry_list) 
     VALUES (" . $_POST['day'] . ", '" . $_POST['date'] . "', '" . $_POST['entry_copy'] . "')";
 
@@ -19,8 +11,7 @@ if ($dbConnection->query($queryString) === TRUE) {
     echo("Error: " . $queryString . "<br>" . $dbConnection->error . "<br>");
 }
 
-
-
+$dbConnection->close();
 ?>
 
 

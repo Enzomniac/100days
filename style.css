@@ -65,3 +65,11 @@ main {
 .entry-form * {
     margin: 0.5rem;
 }
+
+.link {
+    color: inherit;
+}
+
+.link:visited {
+    color: inherit;
+}
