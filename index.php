@@ -1,5 +1,26 @@
 <?php 
-include('php_modules/connect_db.php');
+if ($_SERVER['HTTP_HOST'] == "localhost") {
+    $db_host = 'localhost';
+    $db_name = 'rupton_db';
+    $db_user = 'root';
+    $db_password = '';
+} else {
+    $db_host = 'localhost';
+    $db_name = 'ruptoizt_rupton_db';
+    $db_user = 'ruptoizt_retriever';
+    $db_password = 'F1tzRetriever';
+}
+
+
+$dbConnection = mysqli_connect($db_host, $db_user, $db_password, $db_name);
+
+//check connection
+if (mysqli_connect_errno()) {
+    //echo("Failed to connect to MySQLi: " .mysqli_connect_error() . "<br>");
+} else {
+    //echo("Succesful connection to " . $db_name . "<br>");
+}
+
 $queryString = "SELECT day, date, entry_list FROM days_entry";
 ?>
 
@@ -56,8 +77,11 @@ $dbConnection->close();
 ?>        
     </main>
     <footer>
-        <div class="link">
+        <div class="link">            
             <a href="dashboard.php" class="link">DASHBOARD</a>
+        </div>
+        <div class="link">            
+            <a href="#" class="link">ANOTHER LINK</a>
         </div>
     </footer>
 </body>

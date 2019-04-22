@@ -28,6 +28,9 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    border-top: 2px dashed var(--txt-color);
+    padding-top: 2rem;
+    margin-top: 1rem;
 }
 
 
@@ -72,4 +75,12 @@ main {
 
 .link:visited {
     color: inherit;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+    border-top: 2px dashed var(--txt-color);
+    padding: 1rem;
 }

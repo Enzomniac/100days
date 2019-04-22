@@ -1,5 +1,5 @@
 <?php
-include('php_modules/config.php');
+include('php_modules/connect_db.php');
 $queryString = "INSERT INTO days_entry (day, date, entry_list) 
     VALUES (" . $_POST['day'] . ", '" . $_POST['date'] . "', '" . $_POST['entry_copy'] . "')";
 

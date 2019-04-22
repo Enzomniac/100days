@@ -13,6 +13,7 @@
             <input type="number" name="day" id="day-entry" placeholder="ENTER DAY">
             <input type="date" name="date" id="date">
             <textarea name="entry_copy" id="entry-copy" cols="30" rows="10" placeholder="What did you achieve today"></textarea>
+            <input type="password" name="pwd" id="pwd">
             <button type="submit">Submit Entry</button>
         </form>
     </main>
