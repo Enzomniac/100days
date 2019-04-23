@@ -46,11 +46,72 @@ $queryString = "SELECT day, date, entry_list FROM days_entry";
     </header>
     <aside class="counter">
         <div class="the-day">
-            Day: 1, only 99 days to go!
+            Day: 2, only 98 days to go!
         </div>
-        <div class="the-day">
-            Major Goals
-        </div>        
+        <div class="goal-box">
+            <div class="goal__title">
+                Goals for this Challenge
+            </div>
+            <div class="goal__list">
+                <div class="a-goal">
+                    <div class="a-goal__title">
+                        Learn React Basics
+                    </div>
+                    <div class="a-goal__copy">
+                    </div>
+                </div>
+                <div class="a-goal">
+                    <div class="a-goal__title">
+                        Learn Basic DB Security
+                    </div>
+                    <div class="a-goal__copy">
+                    </div>
+                </div>
+                <div class="a-goal">
+                    <div class="a-goal__title">
+                        Get Started with PWA's
+                    </div>
+                    <div class="a-goal__copy">
+                    </div>
+                </div>
+                <div class="a-goal">
+                    <div class="a-goal__title">
+                        Complete Portfolio
+                    </div>
+                    <div class="a-goal__copy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="goal-box">
+            <div class="goal__title">
+                Side Projects
+            </div>
+            <div class="goal__list">
+                <div class="a-goal">
+                    <div class="a-goal__title">
+                        Portfolio
+                    </div>
+                    <div class="a-goal__copy">
+                    </div>
+                </div>
+                <div class="a-goal">
+                    <div class="a-goal__title">
+                        Artist's Portfolio for WP
+                    </div>
+                    <div class="a-goal__copy">
+                    </div>
+                </div>
+                <div class="a-goal">
+                    <div class="a-goal__title">
+                        Tradesman Invoicing App
+                    </div>
+                    <div class="a-goal__copy">
+                    </div>
+                </div>                
+            </div>
+        </div>
+            
     </aside>
     <main>
 <?php

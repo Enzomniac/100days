@@ -84,3 +84,27 @@ footer {
     border-top: 2px dashed var(--txt-color);
     padding: 1rem;
 }
+
+.goal-box {
+    border: 2px solid var(--txt-color);
+    margin: 0.5rem;
+    padding: 1rem;
+}
+
+.goal__title {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+.goal__list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.a-goal {
+    border: 1px solid var(--txt-color);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
