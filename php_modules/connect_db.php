@@ -9,6 +9,3 @@ if (mysqli_connect_errno()) {
 } else {
     //echo("Succesful connection to " . $db_name . "<br>");
 }
-
-header("Location: http://100days.rupton.co.za/index.php?" . rand(1, 50));
-die();
