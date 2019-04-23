@@ -5,11 +5,12 @@ $queryString = "INSERT INTO days_entry (day, date, entry_list)
 
 echo($queryString . "<br>");
 
-if ($dbConnection->query($queryString) === TRUE) {
+// For debugging only, obviously prevents the the redirect below
+/* if ($dbConnection->query($queryString) === TRUE) {
     echo("New record created succesfully");
 } else {
     echo("Error: " . $queryString . "<br>" . $dbConnection->error . "<br>");
-}
+} */
 
 $dbConnection->close();
 
